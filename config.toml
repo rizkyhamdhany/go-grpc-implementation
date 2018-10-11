@@ -1,0 +1,10 @@
+env="local"
+version="0.0.1"
+
+[database]
+dbdriver="mysql"
+dbhost="tcp(localhost:3306)"
+dbusername="root"
+dbpassword=""
+dbname="spapp_db_client"
+dbcharset="utf8"

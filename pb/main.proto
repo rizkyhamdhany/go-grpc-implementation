@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package jobagencyclientpb;
+option go_package = "jobagencyclientpb";
+
+message Job {
+    int32 Id = 1;
+    string Uuid = 3;
+    string Title = 4;
+    string Poster = 5;
+    string Description = 6;
+    int32 PartnerApplied = 15;
+    string CreatedAt = 18;
+    string UpdatedAt = 19;
+    string DeletedAt = 20;
+}
+
+message JobAllRequest {
+
+}
+
+message JobAllResponse {
+    repeated Job job = 1;
+}
+
+service JobService {
+    rpc JobAll (JobAllRequest) returns (JobAllResponse) {};
+}
